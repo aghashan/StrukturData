@@ -19,7 +19,7 @@ struct antrian
     int akhir;
 } antri;
 
-void resetAntrian()
+void resetAntrian() // untuk reset antrian / menghapus semua antrian
 {
     antri.awal = 0;
     antri.akhir = 0;
@@ -37,7 +37,7 @@ bool kosong()
     }
 }
 
-bool penuh()
+bool penuh() //untuk mengecek apakah data sudah penuh / belum
 {
     if (antri.akhir == max)
     {
@@ -49,7 +49,7 @@ bool penuh()
     }
 }
 
-void lihat()
+void lihat() //menampilkan data yang sudah tersimpan pada array
 {
     if (!kosong())
     {
@@ -66,9 +66,9 @@ void lihat()
     }
 }
 
-void input()
+void input() //untuk menambahkan data 
 {
-    customer cus;
+    customer cus; //untuk mengakses data yabg berada di customer  
 
     if (!penuh())
     {
